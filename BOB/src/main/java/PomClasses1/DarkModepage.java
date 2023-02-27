@@ -33,13 +33,7 @@ public class DarkModepage {
 	public void clickOnDarkMode() {
 		darkMode.click();
 	}
-	public void clickOnDarkMode1234() {
-		darkMode.click();
-	}
 	
-	public void clickOnDarkMode12345() {
-		darkMode.click();
-	}
 	
 	
 	
