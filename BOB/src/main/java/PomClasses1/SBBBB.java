@@ -1,5 +1,10 @@
 package PomClasses1;
 
 public class SBBBB {
-System.out.println("Hello")
+	public static void main(String[] args) {
+		
+	
+    System.out.println("Hello");
+    System.out.println("Hii");
+}
 }
