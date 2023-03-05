@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite01" thread-count="5" parallel="tests">
+
+<listeners>
+		<listener class-name="extentReport.ExtentTestNGIReporterListener"/>
+	</listeners>
+	
   <test  name="ChromeTest">
   <parameter name="browser" value="Chrome"/>
     <classes>
@@ -9,11 +14,5 @@
     </classes>
   </test> <!-- Test -->
   
-  <test thread-count="5" name="FirefoxTest">
-  <parameter name="browser" value="Firefox"/>
-    <classes>
-      <class name="TestNGPackage.TestNG_2_BOB"/>
-     
-    </classes>
-  </test> <!-- Test -->
+ 
 </suite> <!-- Suite01 -->

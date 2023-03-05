@@ -4,6 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -13,15 +15,25 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import Browser.Browser_SetUP;
 import PomClasses1.DarkModepage;
 import PomClasses1.ExclusiveOffersSortBy;
 
 public class TestNG_2_BOB {
 	WebDriver driver;
+	static ExtentTest test;
+	static ExtentHtmlReporter reporter;
 	@Parameters ("browser")
+	
 	@BeforeTest
 	public void launchBrowser (String browserName) {
+		reporter = new ExtentHtmlReporter("test-output/ExtendReport/Extent.html");
+		ExtentReports extend = new ExtentReports();
+		extend.attachReporter(reporter);
 		System.out.println(browserName);
 		if(browserName.equals("Chrome"))
 		{
