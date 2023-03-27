@@ -20,7 +20,7 @@ public class TestNG_1_BOB {
 	public void launchBrowser() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\VARUNDA\\Documents\\Selenium\\chromedriver_win32\\chromedriver.exe");
 		driverTest = new ChromeDriver();
-		driverTest.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driverTest.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driverTest.get("https://www.bankofbaroda.in/");
 		driverTest.manage().window().maximize();
 
